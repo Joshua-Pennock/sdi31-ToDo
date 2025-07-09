@@ -14,17 +14,9 @@ let btn = document.querySelector('.button');
 let checkedValues = [];
 
 btn.addEventListener("click", (event) => {
-  let inputValue = document.getElementById("textBox").value;
-  for (let checkbox of document.querySelectorAll("input")){
-    checkedValues.push(checkbox.checked)
-  }
-  listAdder(inputValue);
-  for (let checkbox of document.querySelectorAll("input")){
-    if (checkbox.checked == ){
-
-    }
-  }
+  listAdder(document.getElementById("textBox").value);
 });
+
 
 let p;
 function handleChange(checkbox) {
