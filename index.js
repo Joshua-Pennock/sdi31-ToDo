@@ -11,18 +11,30 @@ let listAdder = (string) => {
 
 let btn = document.querySelector('.button');
 
-btn.addEventListener("click", () => {
+let checkedValues = [];
+
+btn.addEventListener("click", (event) => {
   let inputValue = document.getElementById("textBox").value;
-  listAdder(inputValue)
+  for (let checkbox of document.querySelectorAll("input")){
+    checkedValues.push(checkbox.checked)
+  }
+  listAdder(inputValue);
+  for (let checkbox of document.querySelectorAll("input")){
+    if (checkbox.checked == ){
+
+    }
+  }
 });
 
 let p;
 function handleChange(checkbox) {
   if (checkbox.checked) {
     p = checkbox.parentNode;
-    p.addEventListener("change", () => { p.style.float = "right"; });
+    p.addEventListener("change", (event) => { p.style.float = "right";
+    event.preventDefault()});
   } else {
     p = checkbox.parentNode;
-    p.addEventListener("change", () => { p.style.float = "left"; });
+    p.addEventListener("change", (event) => { p.style.float = "left";
+    event.preventDefault()});
   }
 }
